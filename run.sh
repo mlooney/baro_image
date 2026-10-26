@@ -1,1 +1,5 @@
-podman run -itd --rm -p 27015-27016:27015-27016/udp -v $(pwd)/conf/serversettings.xml:/srv/barotrauma/runtime/serversettings.xml baro:latest
+podman run -itd --rm -p 27015-27016:27015-27016/udp \
+	-v $(pwd)/conf/serversettings.xml:/srv/barotrauma/runtime/serversettings.xml \
+	-v $(pwd)/conf/Data:/srv/barotrauma/runtime/Data \
+	-v "$(pwd)/campaigns:/srv/barotrauma/runtime/Daedalic Entertainment GmbH/Barotrauma/Multiplayer" \
+	baro:latest
