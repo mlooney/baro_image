@@ -26,5 +26,4 @@ ENV XDG_DATA_HOME /srv/barotrauma/data
 RUN chown  baro:baro "/srv/barotrauma/runtime/Daedalic Entertainment GmbH/Barotrauma"
 COPY scripts/wrap.sh /srv/wrap.sh
 ENTRYPOINT ["/srv/wrap.sh"]
-CMD ["-name Podman", "-public false", "-password test"]
 
